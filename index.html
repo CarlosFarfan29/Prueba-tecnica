@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tareas Personales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- CSS style -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid bg-secondary">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-11 bg-primary p-5 mx-auto mt-4 rounded-top-4"></div>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-sm bg-white text-primary shadow mx-auto w-75 my-4 py-3 rounded-3"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-house-door-fill text-primary"></i>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex align-items-baseline">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-primary"
+                  aria-current="page"
+                  href="#"
+                  >Inicio</a
+                >
+              </li>
+              <i class="bi bi-chevron-right d-sm-block d-none"></i>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Factor Humano</a>
+              </li>
+              <i class="bi bi-chevron-right d-sm-block d-none"></i>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="#">Tareas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Tablero -->
+      <div class="container">
+        <div class="row">
+          <!-- Pendientes -->
+          <div class="col-md-3 col-12 px-4">
+            <div class="row">
+              <form class="px-3 py-1 mb-3 shadow rounded-3 bg-white">
+                <fieldset>
+                  <legend class="text-primary fw-bold">Pendientes</legend>
+                  <input
+                    id="filtroInput"
+                    class="form-control p-0 rounded-5 fs-6 px-3"
+                    type="search"
+                    aria-label="Search"
+                  />
+
+                  <div class="form-check bg-secondary rounded-3 shadow-sm my-3">
+                    <input
+                      class="form-check-input text-center"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label
+                      class="form-check-label text-danger fw-bold"
+                      for="flexCheckDefault"
+                    >
+                      Envio de Reporte Mensual de Soporte...
+                    </label>
+                    <div class="col-12 text-end">
+                      <i class="bi bi-circle-fill text-danger"></i>
+                      <i class="bi bi-circle-fill text-success"></i>
+                      <i class="bi bi-circle-fill text-warning"></i>
+                      <i class="bi bi-circle-fill text-primary"></i>
+                      <i class="bi bi-circle-fill text-secondary"></i>
+                    </div>
+                  </div>
+                  <div class="form-check bg-secondary rounded-3 shadow-sm my-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label
+                      class="form-check-label text-danger fw-bold"
+                      for="flexCheckChecked"
+                    >
+                      Envio de Reporte Anual de Soporte...
+                    </label>
+                    <div class="col-12 text-end">
+                      <i class="bi bi-circle-fill text-danger"></i>
+                      <i class="bi bi-circle-fill text-success"></i>
+                      <i class="bi bi-circle-fill text-warning"></i>
+                      <i class="bi bi-circle-fill text-primary"></i>
+                      <i class="bi bi-circle-fill text-secondary"></i>
+                    </div>
+                  </div>
+                  <div class="form-check bg-secondary rounded-3 shadow-sm my-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label
+                      class="form-check-label fw-bold"
+                      for="flexCheckDefault"
+                    >
+                      Envio de Reporte Semanal de Soporte...
+                    </label>
+                    <div class="col-12 text-end">
+                      <i class="bi bi-circle-fill text-warning"></i>
+                      <i class="bi bi-circle-fill text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="form-check bg-secondary rounded-3 shadow-sm my-3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label
+                      class="form-check-label fw-bold"
+                      for="flexCheckChecked"
+                    >
+                      Envio de Reporte Anual de Soporte...
+                    </label>
+                  </div>
+                  <div class="form-check bg-secondary rounded-3 shadow-sm my-2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label
+                      class="form-check-label fw-bold"
+                      for="flexCheckDefault"
+                    >
+                      Migracion de Sistema
+                    </label>
+                  </div>
+                </fieldset>
+              </form>
+
+              <form class="px-3 py-3 mb-3 shadow rounded-3 bg-white">
+                <select
+                  class="form-select form-select-sm rounded-3 mb-3"
+                  aria-label="Small select example"
+                >
+                  <option selected>PRO001 - Migración de SICAM</option>
+                  <option value="1">PRO002 - Migración de SICAM</option>
+                  <option value="2">PRO003 - Migración de SICAM</option>
+                </select>
+
+                <select
+                  class="form-select form-select-sm rounded-3 mb-2"
+                  aria-label="Small select example"
+                >
+                  <option selected>CL001 - Centro Asturiano de M</option>
+                  <option value="1">CL002 - Centro Asturiano de M</option>
+                  <option value="2">CL003 - Centro Asturiano de M</option>
+                </select>
+
+                <button type="button" class="btn btn-secondary my-1">
+                  Trabajo en Equipo
+                  <span class="badge text-secondary bg-white">3</span>
+                </button>
+                <button type="button" class="btn btn-danger my-1">
+                  Crítico <span class="badge text-secondary bg-white">3</span>
+                </button>
+                <button type="button" class="btn btn-primary my-1">
+                  Documentación
+                  <span class="badge text-secondary bg-white">3</span>
+                </button>
+                <button type="button" class="btn btn-success my-1">
+                  Reportes <span class="badge text-secondary bg-white">2</span>
+                </button>
+                <button type="button" class="btn btn-warning my-1">
+                  Capacitación
+                  <span class="badge text-secondary bg-white">2</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Tareas Personales -->
+          <div class="col-md-9 col-12 px-3 py-3 mb-3 shadow rounded-3 bg-white">
+            <div class="row mb-2">
+              <div class="col-6">
+                <h2 class="fs-4 text-primary fw-bold">Tareas Personales</h2>
+              </div>
+              <div class="col-6 text-primary fw-bold">
+                <h2 class="fs-5 text-end">
+                  <i class="bi bi-person-fill"></i> FSG002 - Monserrat Lopez
+                  Alvarez
+                </h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <span class="badge bg-warning py-2 shadow rounded-3"
+                  >Avance Semanal: 35%</span
+                >
+              </div>
+              <div class="col-6 text-end">
+                <button
+                  type="button"
+                  class="btn btn-secondary text-uppercase btn-outline-primary text-primary fw-bold"
+                >
+                  <i class="bi bi-clipboard-plus-fill"></i> Agregar Tarea
+                </button>
+              </div>
+            </div>
+
+            <div class="row gx-2 my-3">
+              <div class="p-3 mb-2 col-12 col-md-6 col-lg-4 shadow rounded-3">
+                <div class="row">
+                  <div class="col-1 m-0 pe-0 text-secondary">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div class="col-11 text-center p-0 m-0 text-success">
+                    <h6 class="fw-bold">Terminada</h6>
+                  </div>
+                  <div class="col-12 text-primary fw-bold">
+                    <p>Migración de Sistema de Caja en Versión SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Centro Asturiano de México A.C.</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-box-seam-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Migración SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0">
+                    <h6 class="text-info">Desarrollo</h6>
+                  </div>
+                  <div class="col-11">
+                    <p class="text-end fw-bold text-success">100%</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p class="text-end">2021-06-27</p>
+                  </div>
+                  <div class="col-3 m-0 pe-0 text-primary">
+                    <p><i class="bi bi-clock-fill"></i> 360</p>
+                  </div>
+                  <div class="col-9 text-primary">
+                    <p class="text-end">
+                      <i class="bi bi-clock-fill"></i> 2021-06-26 15:00:05
+                    </p>
+                  </div>
+                  <div class="col-12 text-end">
+                    <i class="bi bi-circle-fill text-primary"></i>
+                    <i class="bi bi-circle-fill text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mb-2 col-12 col-md-6 col-lg-4 shadow rounded-3">
+                <div class="row">
+                  <div class="col-11 text-center p-0 m-0 text-success">
+                    <h6 class="fw-bold">Terminada</h6>
+                  </div>
+                  <div class="col-12 text-primary fw-bold">
+                    <p>Migración de Sistema de Caja en Versión SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Centro Asturiano de México A.C.</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-box-seam-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Migración SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0">
+                    <h6 class="text-info">Desarrollo</h6>
+                  </div>
+                  <div class="col-11">
+                    <p class="text-end fw-bold text-success">100%</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p class="text-end">2021-06-27</p>
+                  </div>
+                  <div class="col-3 m-0 pe-0 text-primary">
+                    <p><i class="bi bi-clock-fill"></i> 360</p>
+                  </div>
+                  <div class="col-9 text-primary">
+                    <p class="text-end">
+                      <i class="bi bi-clock-fill"></i> 2021-06-26 15:00:05
+                    </p>
+                  </div>
+                  <div class="col-12 text-end">
+                    <i class="bi bi-circle-fill text-danger"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mb-2 col-12 col-md-6 col-lg-4 shadow rounded-3">
+                <div class="row">
+                  <div class="col-1 m-0 pe-0 text-danger">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                  <div class="col-10 text-center p-0 m-0 text-info">
+                    <h6 class="fw-bold">En Proceso</h6>
+                  </div>
+                  <div class="col-1 ps-0 text-warning">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="col-12 text-primary fw-bold">
+                    <p>Migración de Sistema de Caja en Versión SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Centro Asturiano de México A.C.</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-box-seam-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Migración SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0">
+                    <h6 class="text-info">Desarrollo</h6>
+                  </div>
+                  <div class="col-11">
+                    <p class="text-end fw-bold text-warning">50%</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p class="text-end">2021-06-27</p>
+                  </div>
+                  <div class="col-3 m-0 pe-0 text-primary">
+                    <p><i class="bi bi-clock-fill"></i> 360</p>
+                  </div>
+                  <div class="col-9 text-primary">
+                    <p class="text-end">
+                      <i class="bi bi-clock-fill"></i> 2021-06-26 15:00:05
+                    </p>
+                  </div>
+                  <div class="col-12 text-end">
+                    <i class="bi bi-circle-fill text-warning"></i>
+                    <i class="bi bi-circle-fill text-primary"></i>
+                    <i class="bi bi-circle-fill text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mb-2 col-12 col-md-6 col-lg-4 shadow rounded-3">
+                <div class="row">
+                  <div class="col-12 text-center p-0 m-0 text-secondary">
+                    <h6>Solicitada</h6>
+                  </div>
+                  <div class="col-12 text-primary fw-bold">
+                    <p>Migración de Sistema de Caja en Versión SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Centro Asturiano de México A.C.</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-box-seam-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Migración SICAM2</p>
+                  </div>
+                  <div class="col-12 m-0 pe-0">
+                    <h6 class="text-secondary">Simple</h6>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p class="text-end">2021-06-27</p>
+                  </div>
+                  <div class="col-3 m-0 pe-0 text-primary">
+                    <p><i class="bi bi-clock-fill"></i> 360</p>
+                  </div>
+                  <div class="col-9 text-primary">
+                    <p class="text-end">
+                      <i class="bi bi-clock-fill"></i> 2021-06-26 15:00:05
+                    </p>
+                  </div>
+                  <div class="col-12 text-end">
+                    <i class="bi bi-circle-fill text-danger"></i>
+                    <i class="bi bi-circle-fill text-success"></i>
+                    <i class="bi bi-circle-fill text-warning"></i>
+                    <i class="bi bi-circle-fill text-primary"></i>
+                    <i class="bi bi-circle-fill text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mb-2 col-12 col-md-6 col-lg-4 shadow rounded-3">
+                <div class="row">
+                  <div class="col-12 text-center p-0 m-0 text-secondary">
+                    <h6>Solicitada</h6>
+                  </div>
+                  <div class="col-12 text-primary fw-bold">
+                    <p>Migración de Sistema de Caja en Versión SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Centro Asturiano de México A.C.</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-box-seam-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Migración SICAM2</p>
+                  </div>
+                  <div class="col-12 m-0 pe-0">
+                    <h6 class="text-secondary">Simple</h6>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p class="text-end">2021-06-27</p>
+                  </div>
+                  <div class="col-3 m-0 pe-0 text-primary">
+                    <p><i class="bi bi-clock-fill"></i> 360</p>
+                  </div>
+                  <div class="col-9 text-primary">
+                    <p class="text-end">
+                      <i class="bi bi-clock-fill"></i> 2021-06-26 15:00:05
+                    </p>
+                  </div>
+                  <div class="col-12 text-end">
+                    <i class="bi bi-circle-fill text-danger"></i>
+                    <i class="bi bi-circle-fill text-success"></i>
+                    <i class="bi bi-circle-fill text-warning"></i>
+                    <i class="bi bi-circle-fill text-primary"></i>
+                    <i class="bi bi-circle-fill text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 mb-2 col-12 col-md-6 col-lg-4 shadow rounded-3">
+                <div class="row">
+                  <div class="col-12 text-center p-0 m-0 text-secondary">
+                    <h6>Solicitada</h6>
+                  </div>
+                  <div class="col-12 text-primary fw-bold">
+                    <p>Migración de Sistema de Caja en Versión SICAM2</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-building-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Centro Asturiano de México A.C.</p>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-box-seam-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p>Migración SICAM2</p>
+                  </div>
+                  <div class="col-12 m-0 pe-0">
+                    <h6 class="text-warning">Complementaria</h6>
+                  </div>
+                  <div class="col-1 m-0 pe-0 text-primary">
+                    <i class="bi bi-calendar2-week-fill"></i>
+                  </div>
+                  <div class="col-11 text-primary">
+                    <p class="text-end">2021-06-27</p>
+                  </div>
+                  <div class="col-3 m-0 pe-0 text-primary">
+                    <p><i class="bi bi-clock-fill"></i> 360</p>
+                  </div>
+                  <div class="col-9 text-primary">
+                    <p class="text-end">
+                      <i class="bi bi-clock-fill"></i> 2021-06-26 15:00:05
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
